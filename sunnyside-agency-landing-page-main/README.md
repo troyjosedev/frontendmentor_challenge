@@ -24,6 +24,7 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
+- Best view espesifically in 375px and 1440px
 
 ### Screenshot
 #### Mobile
@@ -31,11 +32,10 @@ Users should be able to:
 #### Desktop
 ![](./images/Screenshot_Desktop.png)
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/troyjosedev/frontendmentor_challenge/tree/main/sunnyside-agency-landing-page-main)
+- Live Site URL: [Netlify Live Site](https://sunnysidelandingpagetroy.netlify.app/)
 
 ## My process
   Adopting a mobile-first approach and focusing on creating a solution that works well between the screen sizes of 375px and 1440px. Have been relearning animation techniques to achieve a bouncing effect for an arrow element. Additionally, I'm conducting research on implementing a hamburger menu for my project.

@@ -34,13 +34,14 @@ Users should be able to:
 
 ![](./images/Screenshot_mobile.png)
 
--Desktop
-![](./images/Screenshot_Desktop.png)
+- Desktop
+
+![](./images/Screenshot_desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/troyjosedev/frontendmentor_challenge/tree/main/intro-section-with-dropdown-navigation-main)
+- Live Site URL: [Netlify live site](https://introsection-with-dropdownnavigation.netlify.app/)
 
 ## My process
 

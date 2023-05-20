@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Epilogue', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove list dotted */
+li {
+    list-style-type: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//Variables
+$white: hsl(0, 0%, 98%);
+$gray:  hsl(0, 0%, 41%);
+$black: hsl(0, 0%, 8%);
+$weight500: 500;
+$weight700: 700;
+
+body {
+  position: relative;
+}
+
+.header {
+ 
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.625rem;
+
+        @media(min-width: 992px) {
+          display: none;
+
+        }
+    }
+
+    &__nav {
+     
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%; 
+      background-color: $white;
+      z-index: 2;
+     
+     a {
+      color: $gray;
+
+      }
+
+      
+    }
+
+    &__icon  a {
+      display: flex; //==========================================
+      align-items: center;
+      column-gap: 1.125rem;
+      margin-block-end: 1rem;
+      
+    }
+
+    &__menu {
+      z-index: 3;
+      
+    }
+    
+    &__list {
+      &--features {
+        margin-block-start: 5rem;
+
+      }
+
+      &--company {
+        display: flex;  
+        flex-direction: column;
+        row-gap: 1rem;
+        margin-block-end: 2.25rem;
+
+      }
+
+      &--careers {
+        margin-block-end: 1.25rem;
+
+      }
+
+      &--icon {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-block-end: 1.25rem;
+
+      }
+
+      &--login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 1rem
+
+      }
+
+      &--reg {
+        background-color: $white;
+        border: 2px solid $black;
+        padding: 0.75rem 4.375rem;
+        border-radius: 1rem;
+
+      }
+      
+    }
+
+    
+    & a {
+      text-decoration: none;
+
+    }
+    
+}
+
+.main {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; 
+  flex-direction: column;
+    &__img {
+    margin-inline: auto;
+    margin-block-end: 3.125rem;
+    z-index: -2;
+    }
+
+    &__header {
+     font-size: 2rem;
+     font-weight: $weight700;
+     text-align: center;
+     margin-block-end: 1.875rem;
+     
+    }
+
+    &__para {
+      font-size: 1rem;
+      text-align: center;
+      margin-inline: 1rem;
+      margin-block-end: 1.875rem;
+
+    }
+
+    &__btn {
+      color: $white;
+      background-color: $black;
+      border: none;
+      padding: .875rem 1.5rem;
+      text-align: center;
+      display: block;
+      margin-inline: auto;
+      margin-block-end: 5rem;
+      border-radius: 10px;
+     
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+        outline: 2px solid $black;
+        cursor: pointer;
+       
+      }
+
+    }
+
+    .main__gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-block-end: 6.25rem;
+      margin-inline: 3em;
+    
+      img {
+        min-width: 3rem
+      }
+
+    }
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black; /* Assuming $gray is defined as hsl(0, 0%, 41%) */
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Allows clicking through the overlay */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+  z-index: -99;
+}
+
+.overlay.active {
+  opacity: 0.5; /* Change the opacity to create the overlay effect */
+  pointer-events: auto; /* Allow interacting with the overlay */
+}
+
+.show {
+  display: none;
+}
+
+.visible {
+  display: none;
+}
+
+@media(max-width: 992px) {
+  .desktop {
+    display: none;
+  }
+
+}
+
+  @media(min-width: 992px) {
+ 
+    .desk {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.875rem 2.5rem;
+      margin-block-end: 3.125rem;
+      
+      a {
+        color: $gray;
+      }
+
+      &__left {
+        display: flex;
+
+        img {
+          flex-shrink: 0;
+        }
+      }
+
+      &__right {
+        display: flex;
+        align-items: center;
+        column-gap: 2.5rem;
+      }
+
+      &__list {
+        display: flex;
+       align-items: center;
+       gap: 2.5rem;
+       
+       img {
+        margin-inline: 0.7rem ;
+       }
+      
+      a {
+        display: flex;
+        align-items: center;
+
+      }
+
+      }
+    }
+    .main {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      min-height: 100vh;
+     
+    }
+
+    .main__img {
+      margin-inline-end: 6rem;
+      align-self: baseline;
+
+    }
+
+    .main__left {
+      padding-inline: 6rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-block-start: 4rem ;
+     
+    }
+
+    .main__header {
+      font-size: 5rem;
+      font-weight: 700;
+      text-align: left;
+      text-indent: 1rem;
+      white-space: pre;
+
+    }
+
+    .main__break {
+      display: block;
+      margin-inline-start: -1rem ;
+
+    }
+    .main__para {
+      text-align: left;
+      font-size: 1.125rem;
+      margin-block-end: 3.4375rem;
+
+    }
+
+    .main__btn {
+      margin-left: 1em;
+      margin-block-end: 30rem;
+    
+    }
+
+  .main__gallery {
+  position: absolute;
+  bottom: 6rem;
+  left: 2rem;
+  }
+
+  .main__gallery img {
+    margin-left: 2em;
+  }
+
+  .desk__drop {
+    position: absolute;
+    top: 5rem
+  }
+
+  .desk__drop {
+    margin-block-end: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0.8rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 1;
+    -ms-border-radius: 1;
+    -o-border-radius: 1;
+    display: none;
+}
+
+  .desk__drop:not(.company):first-of-type {
+    // background-color: red;
+    left: 8rem
+  }
+  
+  .desk__reg {
+    padding: .875rem 1.25rem;
+    border: 2px solid $black;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+  
+}
+
+
+.attribution { 
+  font: inherit;
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  a {
+    color: hsl(228, 45%, 44%); 
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  }
+}

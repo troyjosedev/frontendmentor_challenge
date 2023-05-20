@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="header__flex">
+      <img src="./images/logo.svg" alt="Snap logo">
+      <img class="header__menu menu" src="./images/icon-menu.svg" alt="Menu hamburger">
+    </div>
+    <!-- For Mobile -->
+    <nav class="header__nav" aria-label="Mobile Navigation">
+      <ul class="header__list header__list--features">
+        <li>
+          <a class="header__list--icon features" href="#features" aria-label="Features">
+            Features
+            <img class="arr" src="./images/icon-arrow-down.svg" alt="Arrow">
+          </a>
+          <ul class="header__icon show">
+            <li><a href="#todo"><img src="./images/icon-todo.svg" alt="Todo list icon">Todo list</a></li>
+            <li><a href="#calendar"><img src="./images/icon-calendar.svg" alt="Calendar icon"> Calendar</a></li>
+            <li><a href="#reminders"><img src="./images/icon-reminders.svg" alt="Bell icon"> Reminders</a></li>
+            <li><a href="#planning"><img src="./images/icon-planning.svg" alt="Clock icon"> Planning</a></li>
+          </ul>
+        </li>
+        <li class="header__list">
+          <a class="header__list--icon company" href="#company" aria-label="Company">
+            Company
+            <img class="com" src="./images/icon-arrow-down.svg" alt="Arrow">
+          </a>
+          <ul class="header__list--company visible">
+            <li><a href="#history" aria-label="History">History</a></li>
+            <li><a href="#team" aria-label="Our Team">Our Team</a></li>
+            <li><a href="#blog" aria-label="Blog">Blog</a></li>
+          </ul>
+        </li>
+        <li class="header__list--careers"><a href="#careers" aria-label="Careers">Careers</a></li>
+        <li><a href="#about" aria-label="About">About</a></li>
+      </ul>
+      <ul class="header__list--login">
+        <li><a href="#login" aria-label="Login">Login</a></li>
+        <li class="header__list--reg"><a href="#register" aria-label="Register">Register</a></li>
+      </ul>
+    </nav>
+    <!-- For Desktop -->
+    <nav class="desk desktop" aria-label="Desktop Navigation">
+      <div class="desk__left">
+        <img src="./images/logo.svg" alt="Snap icon">
+        <ul class="desk__list">
+          <li>
+            <a class="desk__arr" href="#features" aria-label="Features">
+              Features
+              <img class="desk__arrow" src="./images/icon-arrow-down.svg" alt="Arrow">
+            </a>
+            <ul class="desk__drop">
+              <li><a href="#todo"><img src="./images/icon-todo.svg" alt="Todo list icon">Todo list</a></li>
+              <li><a href="#calendar"><img src="./images/icon-calendar.svg" alt="Calendar icon"> Calendar</a></li>
+              <li><a href="#reminders"><img src="./images/icon-reminders.svg" alt="Bell icon"> Reminders</a></li>
+              <li><a href="#planning"><img src="./images/icon-planning.svg" alt="Clock icon"> Planning</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="desk__arr" href="#company" aria-label="Company">
+              Company
+              <img class="desk__arrow" src="./images/icon-arrow-down.svg" alt="Arrow">
+            </a>
+            <ul class="desk__drop company">
+              <li><a href="#history" aria-label="History">History</a></li>
+              <li><a href="#team" aria-label="Our Team">Our Team</a></li>
+              <li><a href="#blog" aria-label="Blog">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#careers" aria-label="Careers">Careers</a></li>
+          <li><a href="#about" aria-label="About">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="desk__right">
+          <li><a href="#login" aria-label="Login">Login</a></li>
+          <li><a class="desk__reg" href="#register" aria-label="Register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<main class="main">
+
+  <picture class="main__img">
+    <!-- Mobile image -->
+    <source srcset="./images/image-hero-mobile.png" media="(max-width: 764px)">
+    <!-- Desktop image -->
+    <source srcset="./images/image-hero-desktop.png" media="(min-width: 765px)">
+    <!-- Fallback image -->
+    <img src="./images/image-hero-mobile.png" alt="Mobile image hero">
+  </picture>
+  
+  <div class="main__left">
+  
+    <h1 class="main__header" aria-label="Make remote work">Make <span class="main__break">remote work</span></h1>
+
+    <p class="main__para">Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p> 
+
+    <button class="main__btn">Learn more</button> 
+
+    <section class="main__gallery" aria-label="Client Logos">
+      <img src="./images/client-databiz.svg" alt="Databiz logo">
+      <img src="./images/client-audiophile.svg" alt="Audiophile logo">
+      <img src="./images/client-meet.svg" alt="Meet logo">
+      <img src="./images/client-maker.svg" alt="Maker logo">
+    </section>
+  
+  </div>
+
+</main>
+  
+<footer class="attribution">
+  <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></p> 
+  <p>Coded by <a href="https://github.com/troyjosedev" target="_blank">Troy Jose</a></p> 
+</footer>
+
+<div class="overlay" aria-label="Overlay in Menu"></div>
+
+</body>
+</html>

@@ -37,6 +37,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Epilogue', sans-serif;
+ 
 }
 
 /* A elements that don't have a class get default styles */
@@ -87,12 +88,15 @@ $black: hsl(0, 0%, 8%);
 $weight500: 500;
 $weight700: 700;
 
+
 body {
   position: relative;
+  background-color:  hsl(0, 14%, 98%);
+  
 }
 
 .header {
- 
+  background-color:  hsl(0, 14%, 98%);
     &__flex {
         display: flex;
         justify-content: space-between;
@@ -194,18 +198,18 @@ body {
   justify-content: center; /* Centers items horizontally */
   align-items: center; 
   flex-direction: column;
+  background-color:  hsl(0, 14%, 98%);
     &__img {
     margin-inline: auto;
     margin-block-end: 3.125rem;
-    z-index: -2;
-    }
+   
+  }
 
     &__header {
      font-size: 2rem;
      font-weight: $weight700;
      text-align: center;
      margin-block-end: 1.875rem;
-     
     }
 
     &__para {

@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL:(https://github.com/troyjosedev/frontendmentor_challenge/tree/main/coding-bootcamp-testimonials-slider-master)
+- Live Site URL:(https://testimonials-slider-troy03.netlify.app/)
 
 ## My process
 -  I carefully reviewed the challenge requirements and made sure I had a clear understanding of what was expected, including the responsive layout and slider functionality.

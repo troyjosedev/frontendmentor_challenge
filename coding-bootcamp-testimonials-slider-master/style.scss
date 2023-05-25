@@ -135,13 +135,12 @@ padding-inline: 2.125rem;
 
   &__curve {
     position: relative;
+    display: flex;
     bottom: -3rem;
     left: -2.2rem;
     margin-block-start: 3rem;
 
-    @include respond-to('large') {
-     bottom: -3rem;
-    }
+
     @include respond-to('medium') {
       left: 0;
       position: absolute;
@@ -290,26 +289,17 @@ padding-inline: 2.125rem;
     
    }   
   }
- }
 
- .footer { 
-    font-size: inherit;
-    text-align: center;
-  
+  &__attribution {
+    margin-block: 2rem;
+  a {
+    text-decoration: none;
 
-    @include respond-to('large') {
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
+    &:hover {
+      text-decoration: underline;
     }
-}
- .footer  {
-  &__link {
-    color: hsl(228, 45%, 44%);
-   text-decoration: none;
-  
+  }
+
   }
 }
 

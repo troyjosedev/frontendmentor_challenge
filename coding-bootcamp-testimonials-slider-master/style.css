@@ -102,15 +102,11 @@ select {
 }
 .main__curve {
   position: relative;
+  display: flex;
   bottom: -3rem;
   left: -2.2rem;
   -webkit-margin-before: 3rem;
           margin-block-start: 3rem;
-}
-@media (min-width: 992px) {
-  .main__curve {
-    bottom: -3rem;
-  }
 }
 @media (min-width: 767px) {
   .main__curve {
@@ -250,21 +246,12 @@ select {
   -ms-border-radius: 0 100px 100px 0;
   -o-border-radius: 0 100px 100px 0;
 }
-
-.footer {
-  font-size: inherit;
-  text-align: center;
+.main__attribution {
+  margin-block: 2rem;
 }
-@media (min-width: 992px) {
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-}
-
-.footer__link {
-  color: hsl(228, 45%, 44%);
+.main__attribution a {
   text-decoration: none;
+}
+.main__attribution a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

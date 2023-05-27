@@ -35,13 +35,16 @@ Users should be able to:
 
 ### Screenshot
 
+#### Mobile
 ![](./images/screen_mobile.png)
+
+#### Desktop
 ![](./images/screenshot_desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/troyjosedev/frontendmentor_challenge/tree/main/time-tracking-dashboard-main#links)
+- Live Site URL: [Netlify Live Site](https://time-tracking-time.netlify.app/)
 
 ## My process
 

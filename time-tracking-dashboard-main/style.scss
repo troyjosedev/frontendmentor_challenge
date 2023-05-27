@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+// CSS Reset Andy Bell
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+$breakpoints: (
+  // 'small':  ( min-width:  767px ),
+  'medium': ( min-width:  992px ),
+  'large':  ( min-width: 1200px )
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Kitty Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+ 
+
+// Variables
+$---primary--work: hsl(15, 100%, 70%);
+$---primary--play: hsl(195, 74%, 62%);
+$---primary--study: hsl(348, 100%, 68%);
+$---primary--exercise: hsl(145, 58%, 55%);
+$---primary--social: hsl(264, 64%, 52%);
+$---primary--care:  hsl(43, 84%, 65%);
+$---neutral--veryDarkBlue: hsl(226, 43%, 10%);
+$---neutral--darkBlue: hsl(235, 46%, 20%);
+$---neutral--desaturatedBlue: hsl(235, 45%, 61%);
+$---neutral--paleBlue: hsl(236, 100%, 87%);
+$--white: hsl(210, 40%, 98%);
+$--weight--sm: 300;
+$--weight--md: 400;
+$--weight--lg: 500;
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.125rem;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  background-color: $---neutral--veryDarkBlue;
+ 
+}
+
+
+section {
+  margin-inline: 0.5em;
+  margin-block: 1rem;
+  max-width: 330px;
+}
+
+.sr-only {
+position: absolute;
+top: auto;
+height: 1px;
+width: 1px;
+overflow: hidden;
+clip: rect(1px, 1px, 1px, 1px);
+white-space: nowrap;
+}
+
+.card {
+  max-width: 95ch;
+  margin-block: 4.875rem;
+  color: $--white;
+  min-height: 100;
+
+  @include respond-to('medium') {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.0625rem, 1fr));
+    grid-auto-rows: 250px;
+  }
+  
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    background-color: $---neutral--darkBlue;
+    border-radius: .75rem;
+    -webkit-border-radius: .75rem;
+    -moz-border-radius: .75rem;
+    -ms-border-radius: .75rem;
+    -o-border-radius: .75rem;
+    overflow: hidden;
+
+    @include respond-to('medium') {
+      grid-row: 1/3;
+      
+     }
+}
+
+  &__profile {
+    display: flex;
+    background-color: $---neutral--desaturatedBlue;
+    padding: 1.875rem;
+    column-gap: .9375rem ;
+    border-radius: 0 0 .75rem .75rem;
+    -webkit-border-radius: 0 0 .75rem .75rem;
+    -moz-border-radius: 0 0 .75rem .75rem;
+    -ms-border-radius: 0 0 .75rem .75rem;
+    -o-border-radius: 0 0 .75rem .75rem;
+
+
+    @include respond-to('medium'){
+     flex-direction: column;
+    }
+
+}
+
+  &__header {
+    p {
+      font-size: .8125rem;
+      color: hsl(210, 40%, 85%);
+    }
+
+    h2 {
+      font-size:  clamp(1.64rem, 1.17vw + 1.34rem, 2.5rem);
+      font-weight: $--weight--sm;
+      color: $--white;
+    }
+
+  }
+
+  &__avatar {
+    width: 4.0625rem;
+    height: 4.0625rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    outline: 3px solid $--white;
+
+    @include respond-to('medium') {
+     margin-block-end: 2rem;
+    }
+}
+
+  &__date ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style-type: none;
+   padding-inline: 2.25em;
+   padding-block-start: 1.875rem;
+   padding-block-end: 1.5625rem;
+   color: $---neutral--paleBlue;
+
+   @include respond-to('medium') {
+
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem 1rem;
+    row-gap: 0.5rem;
+    }
+
+  }
+
+  &__body {
+    position: relative;
+    object-fit: cover;
+    border-radius: 12px 12px 12px 12px;
+    overflow: hidden;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -ms-border-radius: 12px 12px 12px 12px;
+    -o-border-radius: 12px 12px 12px 12px;
+
+    &:nth-of-type(2) {
+      background-color: $---primary--work;
+     
+    }
+
+    &:nth-of-type(3) {
+      background-color: $---primary--play;
+    }
+
+    &:nth-of-type(4) {
+      background-color: $---primary--study;
+    }
+
+    &:nth-of-type(5) {
+      background-color: $---primary--exercise;
+    }
+
+    &:nth-of-type(6) {
+      background-color: $---primary--social;
+    }
+
+    &:nth-of-type(7) {
+      background-color: $---primary--care;
+    }
+
+    
+}
+
+  &__icon {
+    padding-block: 1rem;    
+  }
+
+  &__symbol {
+    position: absolute;
+    top: 0;
+    right: 0.2rem;
+  }
+
+  &__copy {
+   background-color: $---neutral--darkBlue;
+   border-radius: 12px 12px 0 0;
+  padding-inline: 1.5em;
+  padding-block: 2.5rem;
+   position: relative;
+   z-index: 1;
+   -webkit-border-radius: 12px 12px 0 ;
+   -moz-border-radius: 12px 12px 0 ;
+   -ms-border-radius: 12px 12px 0 ;
+   -o-border-radius: 12px 12px 0 ;
+  
+
+  }
+
+  &__task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+  
+  }
+
+  &__job {
+    font-size: .875rem;
+    font-weight: $--weight--md;
+  }
+
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to('large') {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    @include respond-to('medium') {
+      flex-direction: column;
+      align-items: start;
+      padding-block: 0.1rem;
+    }
+
+    &--hrs {
+      font-size: clamp(1.88rem, 1.44vw + 1.54rem, 2.83rem);
+      font-weight: $--weight--md;
+    }
+
+    &--track {
+      font-size: 0.9rem;
+      font-weight: $--weight--sm;
+    }
+  }
+  
+}
+
+.attribution {
+  font-size: 1rem;
+  color: $--white;
+  display: flex;
+  gap: 1rem;
+  a {
+    color:  hsl(228, 24%, 66%);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

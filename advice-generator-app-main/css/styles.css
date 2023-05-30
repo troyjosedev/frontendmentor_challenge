@@ -82,6 +82,16 @@ body {
   background-color: hsl(218, 23%, 16%);
 }
 
+.sr-only {
+  position: absolute;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
 .container {
   max-width: 490px;
   margin-inline: 1rem;

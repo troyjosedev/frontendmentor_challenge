@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <script src="script.js" defer></script>
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+ 
+  <main class="main">
+    
+    <header class="main__left">
+
+    <h1 class="main__header">Learn to code by <br> watching others</h1>
+    
+  
+    <p class="main__para">
+    See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+    but understanding how developers think is invaluable. 
+    </p>
+
+    </header>
+
+    <section class="main__right" >
+
+    <button class="main__btn btn--blue" type="button"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button> 
+
+    <form class="main__form">
+      
+      <input type="text" id="first-name" name="first-name" placeholder="First Name" data-input="first__name" required pattern="[A-Za-z]+" title="Only alphabetic characters are allowed." minlength="2" maxlength="30">
+      <p class="warning"  id="firstNameWarning">First Name cannot be empty</p>
+     
+
+      <input type="text" id="last-name" name="last-name" placeholder="Last Name" data-input="last__name" required pattern="[A-Za-z]+" title="Only alphabetic characters are allowed." minlength="2" maxlength="30">
+      <p class="warning"  id="lastNameWarning">Last Name cannot be empty</p>
+      
+      <input type="email" id="email" name="email" placeholder="Email Address" data-input="email" required>
+      <p class="warning" id="emailWarning">Looks like this is not an email</p>
+      
+      <input type="password" id="password" name="password" placeholder="Password" data-input="password" required minlength="8" maxlength="20">
+      <p class="warning" id="passwordWarning">Password cannot be empty</p>
+      
+      <button class="main__btn btn--green" type="submit" data-input="button">Claim your free trial</button>
+
+      <p  class="main__terms">By clicking the button, you are agreeing to our <span>Terms and Services </span></p>
+    </form>
+       </section>
+    
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+      Coded by <a href="#">Troy Hipona</a>
+    </p>
+  </footer>
+</body>
+</html>

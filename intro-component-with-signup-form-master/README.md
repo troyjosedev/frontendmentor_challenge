@@ -33,16 +33,16 @@ Users should be able to:
 ### Screenshot
 
 #### Mobile
-![](/images/screenshot_mobile.png)
+![](./images/screenshot_mobile.png)
 
 #### Desktop
-![](/images/screenshot_desktop.png)
+![](./images/screenshot_desktop.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/troyjosedev/frontendmentor_challenge/tree/main/intro-component-with-signup-form-master)
+- Live Site URL: [Netlify Live Site](https://intro-component-sign-up-troy.netlify.app/)
 
 ## My process
     - I implemented form validation by utilizing HTML5 form validation attributes and JavaScript code to enforce specific input rules and display appropriate warning messages.

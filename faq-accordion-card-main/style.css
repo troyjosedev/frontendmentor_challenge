@@ -116,7 +116,7 @@ main {
   -o-border-radius: 18px;
   margin-block-start: 10em;
   padding-block-end: 3rem;
-
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 hr {
@@ -162,13 +162,14 @@ summary::selection {
 
 h1 {
   font-size: 0.875rem;
-  font-size: clamp(0.875rem, 0.6109154929577465rem + 1.1267605633802815vw, 5rem);
+  font-size: clamp(1rem , 1.6109154929577465rem + 1.1267605633802815vw, 2rem);
   letter-spacing: .2rem;
   font-weight: var(--weight-bold);
   color: var(--desaturated-blue);
   text-align: center;
-  margin-block-start: -1em ;
-  margin-block-end: 2.75em;
+  margin-inline-start: 2em;
+  margin-block-start: 0.2em ;
+  margin-block-end: 2em;
 }
 
 p {
@@ -215,7 +216,7 @@ p::selection {
   }
 
   h1 {
-    margin-inline-start: 1em;
+    margin-inline-start: .75rem;
     margin-block-start: 2em;
     text-align: left;
   }

@@ -16,8 +16,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
-
 ## Overview
   In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!
 
@@ -31,13 +29,18 @@ Users should be able to:
 
 ### Screenshot
 
+#### Mobile
+
 ![](./images/screenshot_mobile.png)
-![](./images/bg-pattern-desktop.svg)
+
+#### Desktop
+
+![](./images/screenshot_desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/troyjosedev/frontendmentor_challenge/tree/main/faq-accordion-card-main)
+- Live Site URL: [Netlify live site](https://faq-accordion-troy.netlify.app/)
 
 ## My process
 
@@ -49,7 +52,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- ES6 Js
+- es6 js
 
 ### What I learned
 
@@ -61,7 +64,7 @@ Using details and summary tag element to easily create accordion effect
       <p id="faq1-content">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p> 
   </details>
 ```
-To position list images, like arrows, on the right side of the list, you can use CSS pseudo-elements. By targeting the <summary> element within the <details> element, you can use the ::after pseudo-element to add additional content to the summary. 
+To position list images, like arrows, on the right side of the list, you can use CSS pseudo-elements. 
 
 ```css
 summary::after {
@@ -79,7 +82,7 @@ This project is an accordion FAQ component that allows for collapsible sections 
 ### Useful resources
 
 - [CSS Gradient](https://www.example.comhttps://cssgradient.io/https://www.example.com) - Help me to  deepening my understanding of gradient usage and providing me with the necessary knowledge to incorporate gradients as backgrounds in my project."
-- [CSS Tricks](https://css-tricks.com/exploring-what-the-details-and-summary-elements-can-do/) - The website provided valuable insights and guidance on utilizing the <details> and <summary> elements effectively. It significantly contributed to my knowledge and enabled me to implement a functional and user-friendly accordion component in my project."
+- [CSS Tricks](https://css-tricks.com/exploring-what-the-details-and-summary-elements-can-do/) - The website provided valuable insights and guidance on utilizing the details and summary elements effectively. It significantly contributed to my knowledge and enabled me to implement a functional and user-friendly accordion component in my project."
 
 ## Author
 
@@ -91,5 +94,4 @@ This project is an accordion FAQ component that allows for collapsible sections 
 Special thanks to Frontend Mentor (https://www.frontendmentor.io/) for providing the design challenge that inspired this project. Their platform has been instrumental in honing my front-end development skills.
 
 I would also like to acknowledge CSS Tricks (https://css-tricks.com/) for their invaluable resources and tutorials. Their content has helped me deepen my understanding of CSS and solve various challenges throughout this project.
-
-
+  

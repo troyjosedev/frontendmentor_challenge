@@ -1,0 +1,123 @@
+@use '../abstract/' as *;
+.container{
+    padding-block: 8.75em;
+    padding-inline: 1.75em;
+    margin-block-end: -8.4em;
+    text-align: center;
+
+    @include respond-to-min("medium") {
+        margin-inline: 8.5em;
+        text-align: left;
+      }
+    
+    @include respond-to-min("large") {
+        padding-block: 19em;
+      }  
+
+    article {
+   
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    padding: 0.5em;
+
+    @include respond-to-min("xlarge") {
+        margin-inline-start: -2.3em;
+        margin-block-start: 4em;
+    }
+     
+    }  
+
+    &__hr {
+        border: 1px solid  hsl(270, 4%, 79%);
+        margin-block-end: 2.8em;
+        margin-inline: auto ;
+        width: 55%;
+
+        @include respond-to-min("medium") {
+           width: 13%;
+           transform: translateX(-32.1em);
+           -webkit-transform: translateX(-32.1em);
+           -moz-transform: translateX(-32.1em);
+           -ms-transform: translateX(-32.1em);
+           -o-transform: translateX(-32.1em);
+        }
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+
+        @include respond-to-min("medium") {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            gap: 3.125em;
+         
+        }
+    }
+ 
+    img {
+        min-width: 4.375em;
+        margin-inline-end: auto;
+        margin-block-end: 1.8em;
+
+        @include respond-to-max("medium") {
+            margin-inline: auto;
+        }
+    }
+
+    &__findout {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary_violet;
+        margin-block-start: 4.8em;
+        padding-inline: 3em;
+        padding-block: 4em 4.375rem;
+        margin-inline: auto ;
+        
+        .btn {
+           z-index: 1;
+           
+            &:hover {
+                color: $primary_violet;
+                background-color: $neutral_light_gray;
+                cursor: pointer;
+            }
+        }
+
+        @include respond-to-min("medium"){
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding-block: 0.4em;
+        
+        }
+
+        &::after {
+            @include respond-to-max("small") {
+                content: url(/images/bg-pattern-how-we-work-mobile.svg);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        &::after {
+            @include respond-to-min("medium") {
+                content: url(/images/bg-pattern-how-we-work-desktop.svg);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+
+    
+}

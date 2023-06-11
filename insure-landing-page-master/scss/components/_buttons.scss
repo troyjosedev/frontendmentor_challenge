@@ -1,0 +1,34 @@
+@use '../abstract/' as *;
+.nav {
+    &__mobile {
+        
+        li:last-child {
+
+            outline: 2px solid $white;
+            padding: 1rem 2rem;
+        }
+    }
+}
+
+.btn {
+          
+    font-family: $font__body;
+    font-weight: $weight__700;
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    background-color: inherit;
+    color: $neutral_light_gray;
+    text-transform: uppercase;
+    margin-inline-start: .2em;
+    padding: .4em 1.3em;
+    border: 2px solid $neutral_light_gray;
+
+    &:last-of-type {
+
+        @include respond-to-min("medium") {
+            margin-inline-end: 4em;
+        }
+        
+    }
+
+}

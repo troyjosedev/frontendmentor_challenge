@@ -1,0 +1,110 @@
+@use '../abstract/' as *;
+@use '../base/' as *;
+
+.nav {
+    position: relative;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    // background-color: yellow;
+  
+
+
+    @include respond-to-min('medium') {
+        margin-inline: 10.3125em;
+        padding-block: 0;
+    }
+    
+
+
+    &__burger {
+        @include respond-to-min('small') {
+            display: none;
+          }
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 1.6875em;
+        list-style-type: none;
+        color: $neutral_gray_violet;
+
+        > li:last-of-type {
+            color: $primary_violet;
+            padding: 0.5em 1.4em;
+            outline: 2px solid $primary_violet;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        
+            -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+            -moz-transition: background-color 0.3s ease, color 0.3s ease;
+            -ms-transition: background-color 0.3s ease, color 0.3s ease;
+            -o-transition: background-color 0.3s ease, color 0.3s ease;
+               &:hover {
+                background-color: $neutral_violet;
+                color: $neutral_light_gray;
+                cursor: pointer;
+            }
+        
+        }
+
+        @include respond-to-max('small') {
+            display: none;
+           
+        }
+        
+    }
+
+    @include respond-to-min('small') {
+        &__mobile {
+        display: none;
+       
+       }
+    }
+
+    @include respond-to-max('small') {
+        &__mobile {
+
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: baseline;
+       position: absolute;
+       top: 0.5em;
+       left: 0;
+       right: 0;
+       min-height: 100vh;
+       height: auto;
+       z-index: 1;
+       max-width: 100%;
+       color: $white;
+       background: $neutral_violet url(/images/bg-pattern-mobile-nav.svg) no-repeat center bottom / contain;     
+       overflow:hidden;
+       margin-block-start: 4.5em;
+       padding-block: 2em;
+    
+       
+       li {
+        margin-block-end: 2em;
+             
+       }
+       main {
+        display: none;
+       }
+
+    
+     
+  
+
+    }
+
+
+    }
+
+
+
+}
+
+

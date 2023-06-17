@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  box-shadow:  0 0 15px 15px hsl(217, 54%, 11%),
+  0 0 16px 16px hsl(217, 54%, 11%),
+  0 0 17px 17px hsl(216, 50%, 16%) !important;
+  
+}
+
+.cute::before {
+  position: relative;
+  transition: opacity 0.3s ease-in, background-color 0.3s ease-in;
+  -webkit-transition: opacity 0.3s ease-in, background-color 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in, background-color 0.3s ease-in;
+  -ms-transition: opacity 0.3s ease-in, background-color 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in, background-color 0.3s ease-in;
+}
+
+.cube:hover::before {
+  content: url(/images/icon-view.svg);
+  cursor: pointer;
+  position: absolute;
+  background-color: rgba(0, 255, 255, 0.7); /* Updated background color with transparency */
+  border-radius: 8px;
+  padding: 7.75rem 8rem;
+  opacity: 1; /* Updated opacity to 1 for full visibility */
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}

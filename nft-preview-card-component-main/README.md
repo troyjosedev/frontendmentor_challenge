@@ -29,11 +29,11 @@ Users should be able to:
 
 ### Mobile Screenshot
 
-![](/images/screenshot_mobile.png)
+![](./images/screenshot_mobile.png)
 
 #### Desktop Screenshot
 
-![](/images/screenshot_desktop.png)
+![](./images/screenshot_desktop.png)
 
 ### Links
 

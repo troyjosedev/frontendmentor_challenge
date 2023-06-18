@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/styles.css">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  
+
+</head>
+<body class="bg-dark-blue grid place-items-center overflow-hidden">
+
+<main class=" grid place-items-center pb-10 my-20 mx-6 bg-desaturated-blue max-w-6xl text-center rounded-lg overflow-hidden  lg:flex lg: flex-row-reverse md:mx-36 lg:mt-44 lg:p-0  ">
+
+  <picture class="bg-soft-violet h-auto ">
+    <source srcset="./images/image-header-desktop.jpg" media="(min-width: 600px)" />
+    <img  class="mix-blend-multiply object-cover   " src="./images/image-header-mobile.jpg" alt="" />
+  </picture>
+
+
+    <section class="px-10 md:px-4 lg:px-0   lg:mx-24 lg:max-w-sm">
+      <h1 class=" font-Inter text-white  text-2xl font-bold leading-7 mt-11 mb-8 lg:text-left lg:mb-10 lg:-mt-2 lg:-ml-4 lg:leading-12  lg:text-4xl ">Get <span class="text-soft-violet font-Inter">insights </span> that help your business grow.</h1>
+      <p class="  text-heading-white font-semibold  text-sm text-center mb-12 md:text-center lg:leading-10 lg:-ml-4 lg:mb-20 lg:-mt-4 lg:mr-8  lg:text-left"> Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+      <ul class="font-Lexend flex flex-col gap-9 lg:flex-row lg:-ml-4 lg:gap-16 ">
+        <li class="flex flex-col gap-2 lg:items-start "> <span class="text-white text-2xl">10k+ </span><span class="text-heading-white text-xm  tracking-widest uppercase"> companies</span></li>
+        <li class="flex flex-col gap-2 lg:items-start"><span class="text-white text-2xl">314 </span> <span class="text-heading-white text-xm tracking-widest uppercase">templates</span> </li>
+        <li class="flex flex-col gap-2 lg:items-start"><span class="text-white uppercase text-2xl">12m+</span><span class="text-heading-white text-xm tracking-widest uppercase">queries</span>  </li>
+      </ul>
+    </section>
+</main>
+
+<footer class="attribution pb-2 ">
+  <p class="text-base text-soft-violet ">Challenge by <a class="text-white hover:underline underline-offset-2" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> Coded by <a class="text-white hover:underline underline-offset-2"  href="#">Troy Jose</a></p> 
+</footer>
+  
+
+</body>
+</html>

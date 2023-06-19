@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover {
+    @apply border-none hover:text-white hover:bg-opacity-0  hover:ring-2 hover:ring-white !important;
+}
+
+section {
+    @apply flex flex-col items-start justify-center !important;
+}

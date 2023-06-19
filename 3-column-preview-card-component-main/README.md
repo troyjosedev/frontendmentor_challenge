@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/troyjosedev/frontendmentor_challenge/tree/main/3-column-preview-card-component-main)
+- Live Site URL: [Netlify Live Site](https://3-column-preview-card-component-troy.netlify.app/)
 
 ### Built with
 

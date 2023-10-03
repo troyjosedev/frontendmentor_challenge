@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.header {
+  border-radius: 0 0 30px 30px;
+  background-color: hsl(225, 100%, 98%);
+  padding-block: 2.625em 5.25em;
+  padding-inline: 1.5em;
+}
+@media (min-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8em;
+  }
+}
+
+.dark-header {
+  background-color: hsl(232, 19%, 15%);
+}
+
+.title {
+  color: hsl(230, 17%, 14%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.title-white {
+  color: hsl(0, 0%, 100%);
+}
+
+.followers {
+  color: hsl(228, 12%, 44%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding-block-end: 1.875em;
+  margin-block-end: 1em;
+}
+
+.hr-line {
+  border: 0.5px solid hsla(228, 12%, 50%, 0.3);
+  margin-block-end: 1em;
+}
+@media (min-width: 767px) {
+  .hr-line {
+    display: none;
+  }
+}
+
+.overview {
+  color: hsl(228, 34%, 66%);
+  font-size: 1.6rem;
+  margin-block-start: 3.125rem;
+  margin-block-end: 2.1875rem;
+  margin-inline: 1em;
+}
+@media (min-width: 767px) {
+  .overview {
+    margin-inline: 5.5em;
+  }
+}
+
+.dark-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+.dark-flex p {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 44%);
+}
+
+.card--container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transform: translateY(-3em);
+  -webkit-transform: translateY(-3em);
+  -moz-transform: translateY(-3em);
+  -ms-transform: translateY(-3em);
+  -o-transform: translateY(-3em);
+}
+@media (min-width: 767px) {
+  .card--container {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-inline: 100px;
+  }
+}
+.card--container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card--big {
+  background-color: hsl(227, 47%, 96%);
+  text-align: center;
+  margin-inline: 1.5em;
+  padding-inline: 6.25em;
+  padding-block: 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.card--big:hover {
+  background-color: #e5e7eb;
+}
+.card--big.facebook {
+  border-top: 4px solid hsl(208, 92%, 53%);
+}
+.card--big.twitter {
+  border-top: 4px solid hsl(203, 89%, 53%);
+}
+.card--big.instagram {
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid transparent;
+}
+.card--big.instagram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-image: linear-gradient(to left, #fdc468, #df4996);
+}
+.card--big.youtube {
+  border-top: 4px solid hsl(348, 97%, 39%);
+}
+.card--big.youtube p:last-of-type {
+  color: hsl(356, 69%, 56%);
+}
+.card--big-icon {
+  color: hsl(228, 12%, 44%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-block-end: 1.875rem;
+}
+.card--big-num {
+  font-size: 2.75rem;
+  color: hsl(230, 17%, 14%);
+}
+.card--big-fans {
+  color: hsl(228, 12%, 44%);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+  margin-block-end: 1.875em;
+}
+.card--big-today {
+  color: hsl(163, 72%, 41%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 767px) {
+  .card--container-sm {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-inline: 7.5rem;
+  }
+}
+
+.card--small {
+  border-radius: 6px;
+  background-color: hsl(227, 47%, 96%);
+  margin-inline: 1.5em;
+  margin-block: 2.125em;
+  padding: 1.5625em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.card--small:hover {
+  background-color: #e5e7eb;
+}
+.card--small-metrics {
+  color: hsl(228, 12%, 44%);
+  font-size: 0.75rem;
+  margin-block-end: 1.875em;
+}
+.card--small-num {
+  color: hsl(230, 17%, 14%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card--small-icon {
+  margin-block-end: 2.6875em;
+}
+.card--small-percent {
+  color: hsl(163, 72%, 41%);
+  font-size: 0.625rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.arrow-down {
+  color: hsl(356, 69%, 56%);
+}
+
+/* Custom Dark Mode Toggle Element */
+.toggle-theme-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 1.6em;
+  width: 3.125em;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0em;
+  top: 0;
+  transition: 0.2s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 3px;
+  content: "";
+  height: 1.3em;
+  width: 1.25em;
+  left: 4px;
+  margin-inline: -2px;
+  position: absolute;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  -webkit-transform: translateX(24px);
+  -moz-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  -o-transform: translateX(24px);
+}
+
+input:checked + .slider {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.flex-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 6.25em;
+}
+
+.attribution {
+  color: hsl(228, 12%, 44%);
+  text-align: center;
+}
+.attribution > a {
+  color: #0A81D1;
+  margin-inline: 0.4em;
+  text-decoration: none;
+}
+.attribution > a:hover {
+  text-decoration: underline;
+}
+
+.card--big.dark-mode {
+  background-color: hsl(228, 28%, 20%);
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.card--big.dark-mode:hover {
+  background-color: hsl(228, 28%, 75%);
+}
+
+.card--small.dark-mode {
+  background-color: hsl(228, 28%, 20%);
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.card--small.dark-mode:hover {
+  background-color: hsl(228, 28%, 75%);
+}/*# sourceMappingURL=index.css.map */
